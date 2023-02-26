@@ -1,9 +1,3 @@
-
-
-
-
-
-
 const express = require("express");
 const cors = require("cors");
 const { authenticate } = require("./middleware/Authentication");
