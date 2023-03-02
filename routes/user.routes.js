@@ -68,9 +68,9 @@ userRouter.post("/login", async (req, res) => {
       return res.send({ msg: "user not found" });
     }
 
-    const token = jwt.sign({ userID: user[0]._id }, "masai");
+    // const token = jwt.sign({ userID: user[0]._id }, "masai");
 
-    res.send({ msg: "Login successfull", num: user[0].num, token: token });
+    res.send({ msg: "Login successfull", num: user[0].num });
   } catch (err) {
     console.log(err);
   }
