@@ -8,13 +8,9 @@ const { userRouter } = require("./routes/user.routes");
 const { adminRouter } = require("./routes/admin.routes");
 const { wishlistRouter } = require("./routes/wishlist.routes");
 
-const corsOptions = {
-  origin: "https://trendsy.vercel.app",
-};
-
 const app = express();
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Hello trends");
