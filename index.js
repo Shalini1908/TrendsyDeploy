@@ -10,7 +10,12 @@ const { wishlistRouter } = require("./routes/wishlist.routes");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://trendsy.vercel.app/", // replace with your frontend app's URL
+    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("Hello trends");
