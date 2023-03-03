@@ -9,11 +9,7 @@ const { adminRouter } = require("./routes/admin.routes");
 
 const app = express();
 app.use(express.json());
-app.use(
-  cors({
-    origin: "https://trendsy.vercel.app",
-  })
-);
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Hello trends");
